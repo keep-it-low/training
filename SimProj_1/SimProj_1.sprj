@@ -1,0 +1,116 @@
+<Program>
+  <Project Version="1.0.9.9">3691921802</Project>
+  <Moduls />
+  <Blocks BreakPoints="">
+    <Block Comment="Сложение" Name="ADD" Index="01" InputsCount="04" Inverce="" Location="408;84" />
+    <Block Comment="Конвертация в тип UDINT" Name="TO_UDINT" Index="02" InputsCount="01" Inverce="" Location="372;288" />
+    <Block Comment="Конвертация в тип UDINT" Name="TO_UDINT" Index="03" InputsCount="01" Inverce="" Location="372;348" />
+    <Block Comment="Конвертация в тип UDINT" Name="TO_UDINT" Index="04" InputsCount="01" Inverce="" Location="372;408" />
+    <Block Comment="Конвертация в тип UDINT" Name="TO_UDINT" Index="05" InputsCount="01" Inverce="" Location="372;468" />
+    <Block Comment="Сложение" Name="ADD" Index="06" InputsCount="04" Inverce="" Location="680;376" />
+  </Blocks>
+  <Fields>
+    <Field Name="x1" Location="228;76" Type="REAL" Value="0,0">
+    </Field>
+    <Field Name="x2" Location="228;112" Type="REAL" Value="0,0">
+    </Field>
+    <Field Name="x3" Location="228;148" Type="REAL" Value="0,0">
+    </Field>
+    <Field Name="x4" Location="228;180" Type="REAL" Value="0,0">
+    </Field>
+    <Field Name="y" Location="624;104" Type="REAL" Value="0,0">
+    </Field>
+    <Field Name="xc1" Location="544;308" Type="UDINT" Value="0">
+    </Field>
+    <Field Name="xc2" Location="544;368" Type="UDINT" Value="0">
+    </Field>
+    <Field Name="xc3" Location="544;428" Type="UDINT" Value="0">
+    </Field>
+    <Field Name="xc4" Location="544;488" Type="UDINT" Value="0">
+    </Field>
+    <Field Name="yc" Location="824;396" Type="UDINT" Value="0">
+    </Field>
+  </Fields>
+  <Chains>
+    <Chain Input="Fields[00]" Output="Block[01].Inputs[00]" Offset="72" />
+    <Chain Input="Fields[01]" Output="Block[01].Inputs[01]" Offset="72" />
+    <Chain Input="Fields[02]" Output="Block[01].Inputs[02]" Offset="72" />
+    <Chain Input="Fields[03]" Output="Block[01].Inputs[03]" Offset="72" />
+    <Chain Input="Block[01].Outputs[00]" Output="Fields[04]" Offset="96" />
+    <Chain Input="Fields[00]" Output="Block[02].Inputs[00]" Offset="52" />
+    <Chain Input="Block[02].Outputs[00]" Output="Fields[05]" Offset="20" />
+    <Chain Input="Block[03].Outputs[00]" Output="Fields[06]" Offset="40" />
+    <Chain Input="Block[04].Outputs[00]" Output="Fields[07]" Offset="40" />
+    <Chain Input="Block[05].Outputs[00]" Output="Fields[08]" Offset="36" />
+    <Chain Input="Fields[01]" Output="Block[03].Inputs[00]" Offset="56" />
+    <Chain Input="Fields[02]" Output="Block[04].Inputs[00]" Offset="56" />
+    <Chain Input="Fields[03]" Output="Block[05].Inputs[00]" Offset="56" />
+    <Chain Input="Fields[05]" Output="Block[06].Inputs[00]" Offset="48" />
+    <Chain Input="Fields[06]" Output="Block[06].Inputs[01]" Offset="48" />
+    <Chain Input="Fields[07]" Output="Block[06].Inputs[02]" Offset="48" />
+    <Chain Input="Fields[08]" Output="Block[06].Inputs[03]" Offset="48" />
+    <Chain Input="Block[06].Outputs[00]" Output="Fields[09]" Offset="44" />
+  </Chains>
+  <Comments />
+  <Places />
+  <Properties AutoBlockOrder="False" RoundTime="100" BuildWhenIllegalType="False">
+    <Components>
+      <ShowModuls Value="True" />
+      <ShowBlocks Value="False" />
+      <ShowFields Value="False" />
+      <ShowChains Value="False" />
+      <ShowComments Value="False" />
+      <ShowPlaces Value="True" />
+      <ShowFieldIndex Value="0" />
+      <AutoCenter Value="1" />
+    </Components>
+    <Panels>
+      <OpenDebug Value="True" />
+      <OpenLibrary Value="True" />
+      <OpenComponents Value="True" />
+    </Panels>
+    <Interface IsRTU="False" Name="COM4" Addres="50" BaudRate="38400" StopBits="One" Parity="None" Interval="100" Circler="True" ETN_IP="192.168.70.131" TIMEOUT="250" REPLACES="5" />
+    <Controller>
+      <Groups>
+        <Group1 Buffer="00 00 00 01" Mask="FF FF" />
+        <Group2 Buffer="00 00 01 01" Mask="FF FF" />
+        <Group3 Buffer="00 00 02 01" Mask="FF FF" />
+        <Group4 Buffer="00 00 03 01" Mask="FF FF" />
+        <Group5 Buffer="00 00 04 01" Mask="FF FF" />
+        <Group6 Buffer="00 00 05 01" Mask="FF FF" />
+        <Group7 Buffer="00 00 06 01" Mask="FF FF" />
+        <Group8 Buffer="00 00 07 01" Mask="FF FF" />
+      </Groups>
+      <InterfaceRS1 Buffer="4B 00 00 00 01 00 01 00 00 64 00 00" />
+      <InterfaceRS2 Buffer="4B 00 00 00 01 00 01 00 00 64 00 00" />
+      <InterfaceEN Buffer="01 05 00 00 A8 C0 64 01 FF FF 00 FF A8 C0 01 01 32 48 14 57 3A 37 00 00 64 61 69 6D 00 6E 00 00 00 00 00 00 00 00 00 00 64 61 69 6D 00 6E 00 00 00 00 00 00 00 00 00 00" />
+      <DataTime Buffer="CB 20 08 1F 0A 1B 07 E4" Config="00 00 00 00" />
+      <Modbus Buffer="00 00" />
+      <MEC101 Buffer="FF 95 00 01 23 1E 00 10 0B 01 00 0F FF FF FF FF FF FF FF FF 0C 02 00 10 FF FF FF FF 0B 01 00 0F 00 00 00 00 00 00 00 00 FF FF FF FF" />
+      <MEC104 Buffer="00 0A 00 0C 00 08 00 00 01 2C 00 96 00 64 00 C8" />
+    </Controller>
+  </Properties>
+  <Graphic CatchTime="200" Legend="True" />
+  <Tags>
+    <Tag Name="x1" Type="REAL" Value="0,0" Index="5" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False" Aperture="1" Minimum="0" Maximum="0">
+    </Tag>
+    <Tag Name="x2" Type="REAL" Value="0,0" Index="6" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False" Aperture="1" Minimum="0" Maximum="0">
+    </Tag>
+    <Tag Name="x3" Type="REAL" Value="0,0" Index="7" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False" Aperture="1" Minimum="0" Maximum="0">
+    </Tag>
+    <Tag Name="x4" Type="REAL" Value="0,0" Index="8" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False" Aperture="1" Minimum="0" Maximum="0">
+    </Tag>
+    <Tag Name="y" Type="REAL" Value="0,0" Index="9" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="True" Aperture="1" Minimum="0" Maximum="0">
+    </Tag>
+    <Tag Name="xc1" Type="UDINT" Value="0" Index="4" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False">
+    </Tag>
+    <Tag Name="xc2" Type="UDINT" Value="0" Index="5" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False">
+    </Tag>
+    <Tag Name="xc3" Type="UDINT" Value="0" Index="6" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False">
+    </Tag>
+    <Tag Name="xc4" Type="UDINT" Value="0" Index="7" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="False">
+    </Tag>
+    <Tag Name="yc" Type="UDINT" Value="0" Index="8" IsInit="True" IsTime="False" IsHold="False" IsReadOnly="True">
+    </Tag>
+  </Tags>
+</Program>

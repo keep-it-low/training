@@ -1,0 +1,48 @@
+<Program>
+  <Project Version="1.0.9.9">2075698338</Project>
+  <Moduls />
+  <Blocks BreakPoints="" />
+  <Fields />
+  <Chains />
+  <Comments />
+  <Places />
+  <Properties AutoBlockOrder="False" RoundTime="100" BuildWhenIllegalType="False">
+    <Components>
+      <ShowModuls Value="True" />
+      <ShowBlocks Value="False" />
+      <ShowFields Value="False" />
+      <ShowChains Value="False" />
+      <ShowComments Value="False" />
+      <ShowPlaces Value="True" />
+      <ShowFieldIndex Value="0" />
+      <AutoCenter Value="1" />
+    </Components>
+    <Panels>
+      <OpenDebug Value="True" />
+      <OpenLibrary Value="True" />
+      <OpenComponents Value="True" />
+    </Panels>
+    <Interface IsRTU="False" Name="COM4" Addres="50" BaudRate="38400" StopBits="One" Parity="None" Interval="100" Circler="True" ETN_IP="192.168.70.131" TIMEOUT="250" REPLACES="5" />
+    <Controller>
+      <Groups>
+        <Group1 Buffer="00 00 00 01" Mask="FF FF" />
+        <Group2 Buffer="00 00 01 01" Mask="FF FF" />
+        <Group3 Buffer="00 00 02 01" Mask="FF FF" />
+        <Group4 Buffer="00 00 03 01" Mask="FF FF" />
+        <Group5 Buffer="00 00 04 01" Mask="FF FF" />
+        <Group6 Buffer="00 00 05 01" Mask="FF FF" />
+        <Group7 Buffer="00 00 06 01" Mask="FF FF" />
+        <Group8 Buffer="00 00 07 01" Mask="FF FF" />
+      </Groups>
+      <InterfaceRS1 Buffer="4B 00 00 00 01 00 01 00 00 64 00 00" />
+      <InterfaceRS2 Buffer="4B 00 00 00 01 00 01 00 00 64 00 00" />
+      <InterfaceEN Buffer="01 05 00 00 A8 C0 64 01 FF FF 00 FF A8 C0 01 01 32 48 14 57 3A 37 00 00 64 61 69 6D 00 6E 00 00 00 00 00 00 00 00 00 00 64 61 69 6D 00 6E 00 00 00 00 00 00 00 00 00 00" />
+      <DataTime Buffer="CB 20 08 1F 0A 1B 07 E4" Config="00 00 00 00" />
+      <Modbus Buffer="00 00" />
+      <MEC101 Buffer="FF 95 00 01 23 1E 00 10 0B 01 00 0F FF FF FF FF FF FF FF FF 0C 02 00 10 FF FF FF FF 0B 01 00 0F 00 00 00 00 00 00 00 00 FF FF FF FF" />
+      <MEC104 Buffer="00 0A 00 0C 00 08 00 00 01 2C 00 96 00 64 00 C8" />
+    </Controller>
+  </Properties>
+  <Graphic CatchTime="250" Legend="True" />
+  <Tags />
+</Program>
