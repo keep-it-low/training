@@ -43,6 +43,6 @@
       <MEC104 Buffer="00 0A 00 0C 00 08 00 00 01 2C 00 96 00 64 00 C8" />
     </Controller>
   </Properties>
-  <Graphic CatchTime="200" Legend="True" />
+  <Graphic CatchTime="250" Legend="True" />
   <Tags />
 </Program>
